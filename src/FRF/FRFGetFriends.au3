@@ -2,9 +2,7 @@
 #include <..\lib\_HttpRequest.au3>
 #include <..\util\ConstructArgs.au3>
 #include <..\util\Utilities.au3>
-
 #include <..\model\Friend.au3>
-
 #include <Array.au3>
 
 
@@ -95,6 +93,7 @@ Func __FRFGetFriends_GetListFriends($__sToken)
 					$__oJson.data.index($i).gender _
 					] ;
 			$__oFriend[$i] = _New_Friend($__aArgsFriend) ;
+			_Util_Debug($__oFriend[$i]._toString());
 		Next
 		Return $__oFriend ;
 	EndIf

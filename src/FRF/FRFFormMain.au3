@@ -14,10 +14,10 @@
 #include <..\util\ConstructArgs.au3>
 
 
-Func _New_FRFForm($__aArgs = Null)
+Func _New_FRFFormMain($__aArgs = Null)
 	;
 	$__object = IDispatch() ;
-	$__object.__name = "FRFForm" ;
+	$__object.__name = "FRFFormMain" ;
 	$__object.__des = "" ;
 	$__object.__status = 1 ;
 	;
@@ -38,30 +38,23 @@ Func _New_FRFForm($__aArgs = Null)
 	$__object._hBtnRemove = Null ;
 	$__object._hBtnContact = Null ;
 	;
-	$__object.__defineGetter("_toString", _FRFForm_toString) ;
-	$__object.__defineGetter("_getError", _FRFForm_getError) ;
-	$__object.__defineGetter("_init", _FRFForm_Init) ;
-	$__object.__defineGetter("_show", _FRFForm_Show) ;
-	$__object.__defineGetter("_hide", _FRFForm_Hide) ;
-	$__object.__defineGetter("_setEnables", _FRFForm_SetEnables) ;
+	$__object.__defineGetter("_toString", _FRFFormMain_toString) ;
+	$__object.__defineGetter("_getError", _FRFFormMain_getError) ;
+	$__object.__defineGetter("_init", _FRFFormMain_Init) ;
+	$__object.__defineGetter("_show", _FRFFormMain_Show) ;
+	$__object.__defineGetter("_hide", _FRFFormMain_Hide) ;
+	$__object.__defineGetter("_setEnables", _FRFFormMain_SetEnables) ;
 	;
 	$__object.__lock() ;
 	;
 	Return $__object ;
-EndFunc   ;==>_New_FRFForm
+EndFunc   ;==>_New_FRFFormMain
 
 
 
 
-Func _FRFForm_Init($_oSelf)
+Func _FRFFormMain_Init($_oSelf)
 	$__oParent = $_oSelf.parent ;
-;~ 	;
-;~ 	$Form2 = GUICreate("Loc Ban Be Khong Tuong tac - V1.0", 419, 289, 287, 139)
-;~ $Label1 = GUICtrlCreateLabel("Loc Ban Be Khong Tuong Tac", 8, 8, 405, 35, $SS_CENTER)
-;~ GUICtrlSetFont(-1, 20, 800, 0, "Times New Roman")
-;~ $Label2 = GUICtrlCreateLabel("< Code by ThienDz - Thank LocMai />", 8, 48, 402, 22, $SS_CENTER)
-
-;~ 	;
 	$_oSelf.parent._hGUI = GUICreate($__oParent._sName & " - v" & $__oParent._sVersion, 419, 289) ;
 	GUISetBkColor(0xffffff) ;
 	GUICtrlCreateLabel($__oParent._sName & " - v" & $__oParent._sVersion, 8, 8, 405, 35, $SS_CENTER) ;
@@ -90,23 +83,23 @@ Func _FRFForm_Init($_oSelf)
 	GUICtrlCreateGroup("Contact", 8, 240, 401, 41) ;
 	GUICtrlCreateLabel($__oParent._sName & " - v" & $__oParent._sVersion & " - " & $__oParent._sAppCreated & " by " & $__oParent._sAuthorName, 16, 256, 282, 17) ;
 	$_oSelf.parent._hBtnContact = GUICtrlCreateButton("Contact", 304, 256, 99, 17) ;
-EndFunc   ;==>_FRFForm_Init
+EndFunc   ;==>_FRFFormMain_Init
 
 
 
-Func _FRFForm_Show($_oSelf)
+Func _FRFFormMain_Show($_oSelf)
 	GUISetState(@SW_SHOW, $_oSelf.parent._hGUI) ;
-EndFunc   ;==>_FRFForm_Show
+EndFunc   ;==>_FRFFormMain_Show
 
 
 
-Func _FRFForm_Hide($_oSelf)
+Func _FRFFormMain_Hide($_oSelf)
 	GUISetState(@SW_HIDE, $_oSelf.parent._hGUI) ;
-EndFunc   ;==>_FRFForm_Hide
+EndFunc   ;==>_FRFFormMain_Hide
 
 
 
-Func _FRFForm_SetEnables($_oSelf)
+Func _FRFFormMain_SetEnables($_oSelf)
 	If $_oSelf.arguments.length == 0 Then
 		Return ;
 	EndIf
@@ -125,24 +118,24 @@ Func _FRFForm_SetEnables($_oSelf)
 	GUICtrlSetState($_oSelf.parent._hCbbGenderRemove, $__bEnbled) ;
 	GUICtrlSetState($_oSelf.parent._hBtnRemove, $__bEnbled) ;
 	GUICtrlSetState($_oSelf.parent._hBtnContact, $__bEnbled) ;
-EndFunc   ;==>_FRFForm_SetEnables
+EndFunc   ;==>_FRFFormMain_SetEnables
 
 
 
 
-Func _FRFForm_getError($_oSelf)
+Func _FRFFormMain_getError($_oSelf)
 	$__oParent = $_oSelf.parent ;
 	Switch $__oParent.__status
 		Case 1
 			Return "Success" ;
 	EndSwitch
-EndFunc   ;==>_FRFForm_getError
+EndFunc   ;==>_FRFFormMain_getError
 
 
 
 
-Func _FRFForm_toString($_oSelf)
+Func _FRFFormMain_toString($_oSelf)
 	$__oParent = $_oSelf.parent ;
 	Dim $__a = [] ;
 	Return _AutoItObject_ArrayToString($__oParent.__name, $__a) ;
-EndFunc   ;==>_FRFForm_toString
+EndFunc   ;==>_FRFFormMain_toString

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<object type="TAForm" name="Form1_1">
+	<properties>
+		<property name="Left" vt="Int16">287</property>
+		<property name="Top" vt="Int8">121</property>
+		<property name="Width" vt="Int16">490</property>
+		<property name="Height" vt="Int16">370</property>
+		<property name="Caption" vt="String">FormTitle</property>
+		<property name="Color" vt="Ident">clBtnFace</property>
+		<property name="Font.Charset" vt="Ident">DEFAULT_CHARSET</property>
+		<property name="Font.Color" vt="Ident">clWindowText</property>
+		<property name="Font.Height" vt="Int8">-11</property>
+		<property name="Font.Name" vt="String">MS Sans Serif</property>
+		<property name="Font.Style" vt="Set"/>
+		<property name="OldCreateOrder" vt="False">False</property>
+		<property name="Visible" vt="True">True</property>
+		<property name="Style" vt="Int32">-1798701056</property>
+		<property name="ExStyle" vt="Int16">256</property>
+		<property name="Version" vt="String">1.04</property>
+		<property name="FormOptOnEvent" vt="False">False</property>
+		<property name="FormOptExpVars" vt="False">False</property>
+		<property name="FormOptPopulate" vt="False">False</property>
+		<property name="FormOptVarsForSet" vt="False">False</property>
+		<property name="FormOptIndentChar" vt="Int8">0</property>
+		<property name="FormOptIndentCount" vt="Int8">1</property>
+		<property name="FormOptIndentInit" vt="Int8">0</property>
+		<property name="FormOptVarScope" vt="Int8">0</property>
+		<property name="Resizing" vt="Set"/>
+		<property name="PixelsPerInch" vt="Int8">96</property>
+		<property name="TextHeight" vt="Int8">13</property>
+	</properties>
+	<components>
+		<object type="TAListView" name="ListView1">
+			<properties>
+				<property name="Left" vt="Int8">8</property>
+				<property name="Top" vt="Int8">8</property>
+				<property name="Width" vt="Int16">458</property>
+				<property name="Height" vt="Int16">286</property>
+				<property name="CtrlStyle" vt="Int32">1343422477</property>
+				<property name="CtrlExStyle" vt="Int16">512</property>
+				<property name="Resizing" vt="Set"/>
+				<property name="Columns" vt="Collection">
+					<collection>
+						<item>
+							<property name="Caption" vt="String">Remove</property>
+						</item>
+						<item>
+							<property name="Caption" vt="String">Name</property>
+						</item>
+						<item>
+							<property name="Caption" vt="String">UID</property>
+						</item>
+						<item>
+							<property name="Caption" vt="String">Gender</property>
+						</item>
+						<item>
+							<property name="Caption" vt="String">Score React</property>
+						</item>
+						<item>
+							<property name="Caption" vt="String">Score Cmt</property>
+						</item>
+					</collection>
+				</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TAButton" name="Remove">
+			<properties>
+				<property name="Left" vt="Int16">256</property>
+				<property name="Top" vt="Int16">296</property>
+				<property name="Width" vt="Int8">99</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="Caption" vt="String">Remove</property>
+				<property name="TabOrder" vt="Int8">1</property>
+				<property name="Color" vt="Ident">clBtnFace</property>
+				<property name="CtrlStyle" vt="Int32">1342373888</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockWidth, DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TAButton" name="Close">
+			<properties>
+				<property name="Left" vt="Int16">368</property>
+				<property name="Top" vt="Int16">296</property>
+				<property name="Width" vt="Int8">99</property>
+				<property name="Height" vt="Int8">25</property>
+				<property name="Caption" vt="String">Close</property>
+				<property name="TabOrder" vt="Int8">2</property>
+				<property name="Color" vt="Ident">clBtnFace</property>
+				<property name="CtrlStyle" vt="Int32">1342373888</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockWidth, DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+	</components>
+</object>

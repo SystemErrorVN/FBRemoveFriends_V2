@@ -13,43 +13,45 @@ Func _Util_StringGenderToNumber($__sGender)
 		Case "Female"
 			Return -1 ;
 	EndSwitch
-EndFunc   ;==>__Main_StringGenderToNumber
+EndFunc   ;==>_Util_StringGenderToNumber
 
 
 
 Func _Util_WinGetPos($__oFRFForm)
 	Return WinGetPos($__oFRFForm._sName & " - v" & $__oFRFForm._sVersion) ;
-EndFunc   ;==>__Main_WinGetPos
+EndFunc   ;==>_Util_WinGetPos
 
 
 
 Func _Util_MsgboxError($__sContent)
-	Return MsgBox(16, "Error!", $__sContent);
-EndFunc
+	Return MsgBox(16, "Error!", $__sContent) ;
+EndFunc   ;==>_Util_MsgboxError
 
 
 
 Func _Util_MsgBoxSuccess($__sContent)
-	Return MsgBox(64, "Success!", $__sContent);
-EndFunc
+	Return MsgBox(64, "Success!", $__sContent) ;
+EndFunc   ;==>_Util_MsgBoxSuccess
 
-
+Func _Util_ConfirmWarning($__sContent)
+	Return MsgBox(48 + 4, "Your choice:", $__sContent) == 6 ;
+EndFunc   ;==>_Util_ConfirmSuccess
 
 Func _Util_MsgBoxWarning($__sContent)
-	Return MsgBox(32, "Warning!", $__sContent);
-EndFunc
+	Return MsgBox(48, "Warning!", $__sContent) ;
+EndFunc   ;==>_Util_MsgBoxWarning
 
 
 
 Func _Util_Trim($__sInput)
-	Return StringStripWS($__sInput, 3);
-EndFunc
+	Return StringStripWS($__sInput, 3) ;
+EndFunc   ;==>_Util_Trim
 
 
 
 Func _Util_CtrlRead($__gControlId)
 	Return GUICtrlRead($__gControlId) ;
-EndFunc   ;==>_Util_gRead
+EndFunc   ;==>_Util_CtrlRead
 
 
 

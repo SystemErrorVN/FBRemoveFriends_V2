@@ -198,20 +198,26 @@ Func __FRFRemove_SetScore($__oAccount, $__aFriends) ;
 			;
 			For $i = 0 To $__oJsonNodeFeed.length() - 1
 				;
+				_Util_Debug("============================================");
 				$__oJsonNodesReact = $__oJsonNodeFeed.index($i).node.feedback.reactors.nodes ;
 				For $j = 0 To $__oJsonNodesReact.length() - 1 ;
 					$__sKey = $__oJsonNodesReact.index($j).id ;
+					_Util_Debug($__sKey);
 					$__nIndex = __FRFRemove_getIndex($__sKey, $__aFriends) ;
-					If $__nIndex <> False Then
+					If $__nIndex <> -1 Then
+					_Util_Debug("duplicate => ");
 						$__aFriends[$__nIndex]._nCountReact += 1 ;
+					_Util_Debug("duplicate => "&$__aFriends[$__nIndex]._toString());
 					EndIf
 				Next
 				;
+				_Util_Debug("---------------------------------------------");
 				$__oJsonNodesCmt = $__oJsonNodeFeed.index($i).node.feedback.commenters.nodes ;
 				For $j = 0 To $__oJsonNodesCmt.length() - 1 ;
 					$__sKey = $__oJsonNodesCmt.index($j).id ;
+					_Util_Debug($__sKey);
 					$__nIndex = __FRFRemove_getIndex($__sKey, $__aFriends) ;
-					If $__nIndex <> False Then
+					If $__nIndex <> -1 Then
 						$__aFriends[$__nIndex]._nCountComment += 1 ;
 					EndIf
 				Next
@@ -253,5 +259,5 @@ Func __FRFRemove_getIndex($__sId, $__aFriends)
 			Return $i ;
 		EndIf
 	Next
-	Return False ;
+	Return -1;
 EndFunc   ;==>__FRFRemove_getIndex
